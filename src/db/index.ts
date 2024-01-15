@@ -6,7 +6,7 @@ export function db() {
       console.log("MongoDB Connection Succeded...");
     });
   } catch (error) {
-    return "MongoDB Connection Succeeded.";
+    return "MongoDB Connection Succeeded."; 
   }
 }
 
