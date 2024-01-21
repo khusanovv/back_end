@@ -8,7 +8,7 @@ export default {
   Query: {
     all_jops: async (_: undefined, __: object, headers: acces_token_type) => {
       try {
-        jwt.verify(headers.acces_token, "1313");
+        // jwt.verify(headers.acces_token, "1313");
         return await jops.find({});
       } catch (error) {
         return new GraphQLError(error.message);

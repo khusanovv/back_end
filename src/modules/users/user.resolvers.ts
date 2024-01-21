@@ -4,7 +4,7 @@ export default {
   Query: {
     user: async (_: undefined, __: object, headers: acces_token_type) => {
       try {
-        jwt.verify(headers.acces_token, "1313");
+        // jwt.verify(headers.acces_token, "1313");
         return await User.find({});
       } catch (error) {
         return new Error(error.message);
@@ -46,8 +46,8 @@ export default {
         const newUser = await User.create({ ...data });
         const token = jwt.sign({ _id: newUser._id }, "1313");
         console.log(newUser);
-        
-        return { 
+
+        return {
           succes: true,
           data: newUser,
           acces_token: token,
