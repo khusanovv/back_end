@@ -1,6 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 const UserSchema = new Schema({
-  first_name: String,
+  user_name: String,
   email: {
     type: String,
   },
@@ -8,21 +8,30 @@ const UserSchema = new Schema({
     type: String, 
     required: true,
   },
-  country:{
-    type: String,
+  phone:{
+    type: Number,
   },
-  site:{
+  price:{
     type: String
   }
   ,
-  education:{
+  date:{
     type:String
   },
-  language:{
+  fullname:{
     type:String
   },
-  sertificate:{
+  degree:{
     type:String
+  },
+  position:{
+    type:String
+  },
+  info:{
+    type:String
+  },
+  salary:{
+    type:Number
   },
   role: {
     type: String,
