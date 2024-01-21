@@ -4,14 +4,16 @@ type Query {
 }
 type User {
   _id:String
-  first_name: String,
-  email:String,
+  user_name: String,
   password: String,
-  country: String,
-  site:String,
-  education:String,
-  language:String,
-  sertificate:String,
+  phone: String,
+  price:String,
+  date: String,
+  fullname:String,
+  degree:String,
+  position:String,
+  info:String,
+  salary:String,
   role: String,
   ratings: [Rating]!
 
@@ -26,9 +28,31 @@ type Rating {
 
 type Mutation {
   signin(email: String!, password: String!): Response
-  signup(email: String!, password: String!, country: String!,  site:String!, education:String!, language:String!, sertificate:String!): Response
+  signup(
+    user_name: String!,
+    password: String!,
+    phone: String!,
+    price:String!,
+    date: String!,
+    fullname:String!,
+    degree:String!,
+    position:String!,
+    info:String!,
+    salary:String!,
+  )): Response
   deleteUsers(id: String): Delete_Response
-  editUsers(first_name: String,email:String,password: String,  country: String!,  site:String!, education:String!, language:String!, sertificate:String!): UpdateResponse
+  editUsers(
+    user_name: String!,
+    password: String!,
+    phone: String!,
+    price:String!,
+    date: String!,
+    fullname:String!,
+    degree:String!,
+    position:String!,
+    info:String!,
+    salary:String!,
+  ): UpdateResponse
  
   rateUser(userId: ID!, stars: Int!): Rating!
   

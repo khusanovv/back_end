@@ -1,15 +1,12 @@
 import mongoose, { Schema } from "mongoose";
 const UserSchema = new Schema({
   user_name: String,
-  email: {
-    type: String,
-  },
   password: {
     type: String, 
     required: true,
   },
   phone:{
-    type: Number,
+    type: String,
   },
   price:{
     type: String
@@ -31,7 +28,7 @@ const UserSchema = new Schema({
     type:String
   },
   salary:{
-    type:Number
+    type:String
   },
   role: {
     type: String,
