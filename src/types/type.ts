@@ -1,11 +1,16 @@
 interface SingupData {
-  email: string;
-  password: string;
-  country: string;
-  site:string;
-  education:string;
-  language:string;
-  sertificate:string;
+  
+  user_name: String,
+  password: String,
+  email:String
+  phone: String,
+  price:String,
+  date: String,
+  fullname:String,
+  degree:String,
+  position:String,
+  info:String,
+  salary:String,
 }
 
 interface Params_id {

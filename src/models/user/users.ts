@@ -5,12 +5,16 @@ const UserSchema = new Schema({
     type: String, 
     required: true,
   },
+  email:{
+    type:String,
+  },
   phone:{
     type: String,
   },
   price:{
     type: String
   }
+  
   ,
   date:{
     type:String

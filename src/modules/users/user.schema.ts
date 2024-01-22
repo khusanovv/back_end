@@ -6,6 +6,7 @@ type User {
   _id:String
   user_name: String,
   password: String,
+  email:String,
   phone: String,
   price:String,
   date: String,
