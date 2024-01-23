@@ -9,7 +9,7 @@ const UserSchema = new Schema({
     type:String,
   },
   phone:{
-    type: Number,
+    type: String,
   },
   price:{
     type: String
