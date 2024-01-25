@@ -4,7 +4,7 @@ export default {
   Query: {
     user: async (_: undefined, __: object, headers: acces_token_type) => {
       try {
-        // jwt.verify(headers.acces_token, "1313");
+        jwt.verify(headers.acces_token, "1313");
         return await User.find({});
       } catch (error) {
         return new Error(error.message);
